@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.9.0) (token/ERC721/extensions/ERC721URIStorage.sol)
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "../ERC721.sol";
-import "../../../interfaces/IERC4906.sol";
+import {ERC721} from "../ERC721.sol";
+import {Strings} from "../../../utils/Strings.sol";
+import {IERC4906} from "../../../interfaces/IERC4906.sol";
+import {IERC165} from "../../../interfaces/IERC165.sol";
 
 /**
  * @dev ERC721 token with storage based token URI management.

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.7.0) (proxy/ERC1967/ERC1967Proxy.sol)
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "../Proxy.sol";
-import "./ERC1967Utils.sol";
+import {Proxy} from "../Proxy.sol";
+import {ERC1967Utils} from "./ERC1967Utils.sol";
 
 /**
  * @dev This contract implements an upgradeable proxy. It is upgradeable because calls are delegated to an
@@ -18,9 +18,13 @@ contract ERC1967Proxy is Proxy {
      *
      * If `_data` is nonempty, it's used as data in a delegate call to `_logic`. This will typically be an encoded
      * function call, and allows initializing the storage of the proxy like a Solidity constructor.
+     *
+     * Requirements:
+     *
+     * - If `data` is empty, `msg.value` must be zero.
      */
     constructor(address _logic, bytes memory _data) payable {
-        ERC1967Utils.upgradeToAndCall(_logic, _data, false);
+        ERC1967Utils.upgradeToAndCall(_logic, _data);
     }
 
     /**

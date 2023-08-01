@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 // This file was procedurally generated from scripts/generate/templates/Checkpoints.t.js.
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "forge-std/Test.sol";
-import "../../../contracts/utils/math/SafeCast.sol";
-import "../../../contracts/utils/structs/Checkpoints.sol";
+import {Test} from "forge-std/Test.sol";
+import {SafeCast} from "../../../contracts/utils/math/SafeCast.sol";
+import {Checkpoints} from "../../../contracts/utils/structs/Checkpoints.sol";
 
 contract CheckpointsTrace224Test is Test {
     using Checkpoints for Checkpoints.Trace224;

@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.9.0) (access/AccessControlDefaultAdminRules.sol)
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "./AccessControl.sol";
-import "./IAccessControlDefaultAdminRules.sol";
-import "../utils/math/SafeCast.sol";
-import "../interfaces/IERC5313.sol";
+import {IAccessControlDefaultAdminRules} from "./IAccessControlDefaultAdminRules.sol";
+import {AccessControl, IAccessControl} from "../AccessControl.sol";
+import {SafeCast} from "../../utils/math/SafeCast.sol";
+import {Math} from "../../utils/math/Math.sol";
+import {IERC5313} from "../../interfaces/IERC5313.sol";
 
 /**
  * @dev Extension of {AccessControl} that allows specifying special rules to manage
@@ -34,8 +35,6 @@ import "../interfaces/IERC5313.sol";
  *    ) {}
  * }
  * ```
- *
- * _Available since v4.9._
  */
 abstract contract AccessControlDefaultAdminRules is IAccessControlDefaultAdminRules, IERC5313, AccessControl {
     // pending admin pair read/written together frequently

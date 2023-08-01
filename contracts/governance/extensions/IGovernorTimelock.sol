@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (governance/extensions/IGovernorTimelock.sol)
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "../IGovernor.sol";
+import {IGovernor} from "../IGovernor.sol";
 
 /**
  * @dev Extension of the {IGovernor} for timelock supporting modules.
- *
- * _Available since v4.3._
  */
 abstract contract IGovernorTimelock is IGovernor {
     /**

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (access/AccessControlEnumerable.sol)
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-import "./IAccessControlEnumerable.sol";
-import "./AccessControl.sol";
-import "../utils/structs/EnumerableSet.sol";
+import {IAccessControlEnumerable} from "./IAccessControlEnumerable.sol";
+import {AccessControl} from "../AccessControl.sol";
+import {EnumerableSet} from "../../utils/structs/EnumerableSet.sol";
 
 /**
  * @dev Extension of {AccessControl} that allows enumerating the members of each role.
